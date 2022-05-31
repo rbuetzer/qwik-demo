@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { Host, component$, Slot } from '@builder.io/qwik';
 import confetti from 'canvas-confetti';
 
 export const throwConfetti = async () => {
@@ -20,10 +20,10 @@ export const throwConfetti = async () => {
     document.body.removeChild(myCanvas);
 }
 
-export const ConfettiTile = component$(() => {
+export const Confetti = component$(() => {
     return (
-        <button onClick$={throwConfetti} class="text-9xl border border-black p-8">
-            🥳
-        </button>
+        <Host onClick$={throwConfetti}>
+            <Slot />
+        </Host>
     );
 });
