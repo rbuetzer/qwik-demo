@@ -7,9 +7,9 @@ export const Root = () => {
     <html>
       <head>
         <meta charSet="utf-8" />
-        <title>Qwik Blank App</title>
+        <title>Stadionuhr</title>
       </head>
-      <body>
+      <body style="background-color: #be4d47">
         <App />
       </body>
     </html>
